@@ -1999,7 +1999,6 @@ def main(argv):
                 updateSubmodules()
                 downloadDependencies()
                 downloadLocalEntities()
-                prepareLocalEntityJar()
                 release.buildAll()
                 release.runTests()
                 if not stylesheet:
