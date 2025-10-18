@@ -65,6 +65,25 @@ DEALINGS IN THE SOFTWARE.
   <target name="clean">
     <delete dir="${dist}"/>
   </target>
+
+  <path id="jing-trang.classpath">
+    <pathelement location="../jing-trang/lib/saxon9.jar"/>
+    <pathelement location="../jing-trang/lib/isorelax.jar"/>
+  </path>
+  <path id="vnu.classpath">
+    <path refid="jing-trang.classpath"/>
+    <path refid="htmlparser.classpath"/>
+    <path refid="galimatias.classpath"/>
+    <path refid="langdetect.classpath"/>
+    <path refid="validator.classpath"/>
+    <pathelement location="../jing-trang/build/jing.jar"/>
+    <pathelement location="../css-validator/css-validator.jar"/>
+    <pathelement location="../jars/galimatias.jar"/>
+    <pathelement location="../jars/htmlparser.jar"/>
+    <pathelement location="../jars/langdetect.jar"/>
+    <pathelement location="../jars/validator.jar"/>
+  </path>
+
   <target name="jar">
     <jar destfile="${dist}/vnu.jar" duplicate="preserve">
       <zipgroupfileset dir="../jars" includes="*.jar"/>
