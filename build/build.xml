@@ -340,10 +340,6 @@ DEALINGS IN THE SOFTWARE.
       <classes dir="${validator.build.basedir}/core/classes"/>
       <classes dir="${validator.build.basedir}/resources"/>
       <classes file="${validator.basedir}/resources/war/log4j.xml"/>
-      <service type="org.relaxng.datatype.DatatypeLibraryFactory">
-        <provider classname="com.thaiopensource.datatype.xsd.DatatypeLibraryFactoryImpl"/>
-        <provider classname="nu.validator.datatype.Html5DatatypeLibraryFactory"/>
-      </service>
     </war>
   </target>
 
@@ -751,10 +747,6 @@ DEALINGS IN THE SOFTWARE.
         <attribute name="Implementation-Version" value="${version}"/>
         <attribute name="Implementation-Vendor" value="http://validator.github.io/validator/"/>
       </manifest>
-      <service type="org.relaxng.datatype.DatatypeLibraryFactory">
-        <provider classname="com.thaiopensource.datatype.xsd.DatatypeLibraryFactoryImpl"/>
-        <provider classname="nu.validator.datatype.Html5DatatypeLibraryFactory"/>
-      </service>
     </jar>
   </target>
   <target name="validator-bundle" depends="validator-artifacts">
